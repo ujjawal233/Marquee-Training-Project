@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        .container{
+        width : 600px;
+        height : 400px;
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(3,1fr);
+        gap: 10px;
+        background-color: white;
+        justify-items: center;
+        align-items: center;
+        margin: 150px auto;
+    }
+    #b1{
+        height: 50px;
+        width: 50px;
+        background-color: red;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        justify-self: end;
+        align-self: end;
+    }
+    #b2{
+        height: 50px;
+        width: 50px;
+        background-color: blue;
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    #b3{
+        height: 50px;
+        width: 50px;
+        background-color: green;
+        grid-column: 3/4;
+        grid-row: 1/2;
+        justify-self: end;
+        align-self: start;
+    }
+    #b4{
+        height: 50px;
+        width: 50px;
+        background-color: yellow;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        justify-self: start;
+    }
+    #b5{
+        height: 50px;
+        width: 50px;
+        background-color: cyan;
+        grid-column: 2/3;
+        grid-row: 2/3;
+        justify-self: end;
+    }
+    #b6{
+        height: 50px;
+        width: 50px;
+        background-color: magenta;
+        grid-column: 3/4;
+        grid-row: 2/3;
+        justify-self: start;
+    }
+    #b7{
+        height: 50px;
+        width: 50px;
+        background-color: orange;
+        grid-column: 1/2;
+        grid-row: 3/4;
+        justify-self: start;
+        align-self: end;
+    }
+    #b8{
+        height: 50px;
+        width: 50px;
+        background-color: purple;
+        grid-column: 2/3;
+        grid-row: 3/4;;
+        align-self: start;
+    }
+    #b9{
+        height: 50px;
+        width: 50px;
+        background-color: pink;
+        grid-column: 3/4;
+        grid-row: 3/4;
+        justify-self: end;
+    }
+    .letter-a{
+        width: 420px;
+        height: 420px;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        gap: 8px;
+        margin: 150px auto;
+        align-items: stretch;
+        justify-items: stretch;
+    }
+    .a-segment{
+        background: black;
+        border-radius: 10px;
+    }
+    .a1{
+        grid-column: 2 / 6;
+        grid-row: 1 / 2;
+    }
+    .a2{
+        grid-column: 1 / 3;
+        grid-row: 2 / 7;
+        align-self: stretch;
+    }
+    .a3{
+        grid-column: 5 / 7;
+        grid-row: 2 / 7;
+        align-self: stretch;
+    }
+    .a4{
+        grid-column: 3 / 5;
+        grid-row: 4 / 5;
+    }
+    
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+    }
+    
+    .dashboard{
+        display:grid;
+        min-height: 100vh;
+        grid-template-columns: 240px 1fr;
+        background-color: #0f172a;
+        color: white;
+    }
+    
+    .sidebar{
+        background-color: #1d4ed8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    
+    .content-area{
+        display: grid;
+        grid-template-columns: repeat(3, minmax(220px, 1fr));
+        grid-auto-rows: minmax(140px, auto);
+        gap: 24px;
+        padding: 24px;
+    }
+    
+    .top-nav{
+        grid-column: 1 / -1;
+        background-color: #3fa38c;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        height: 70px;
+        border-radius: 12px;
+    }
+    
+    .card{
+        border: 2px solid rgba(255,255,255,0.18);
+        border-radius: 16px;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        min-height: 140px;
+    }
+    
+    .users{background-color: #2563eb;}
+    .revenue{background-color: #16a34a;}
+    .orders{background-color: #b45309;}
+    .table{background-color: #701a75;}
+    .widget{background-color: #0284c7;}
+    
+    .feature-red{
+        grid-column: span 2;
+        background-color: #4338ca;
+        min-height: 240px;
+    }
+    .card h3{
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+    
+    .card p{
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar"> Sidebar </aside>
+        <main class="content-area">
+            <header class="top-nav"> Top Navigation </header>
+
+            <div class="card users">
+                <h3>Users</h3>
+                <p>12,450</p>
+            </div>
+
+            <div class="card revenue">
+                <h3>Revenue</h3>
+                <p>$24,800</p>
+            </div>
+
+            <div class="card orders">
+                <h3>Orders</h3>
+                <p>1,234</p>
+            </div>
+
+            <div class="card chart feature-red">
+                <h3>Chart</h3>
+                <p>(span 2)</p>
+            </div>
+
+            <div class="card table">
+                <h3>Table</h3>
+            </div>
+
+            <div class="card widget">
+                <h3>Widget 1</h3>
+            </div>
+
+            <div class="card widget">
+                <h3>Widget 2</h3>
+            </div>
+
+            <div class="card widget">
+                <h3>Widget 3</h3>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
